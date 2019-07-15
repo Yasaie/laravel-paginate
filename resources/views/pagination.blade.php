@@ -18,10 +18,12 @@
             @php(
                 $start = $pages->current < $pages->count
                     ? ($pages->current > 1 ? $pages->current - 1 : 1)
-                    : $pages->current - 2;
+                    : $pages->current - 2
+            )
+            @php(
                 $end = $pages->current < $pages->count
                     ? $pages->current + ($pages->current > 1 ? 1 : 2)
-                    : $pages->count;
+                    : $pages->count
             )
             @for($i = $start; $i <= $end; $i++)
                 @php($navigate['page'] = $i)
