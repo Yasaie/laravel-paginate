@@ -15,14 +15,14 @@
                     <li class="page-item disabled"><a href="" class="page-link">...</a></li>
                 @endif
             @endif
-            @php
+            @php(
                 $start = $pages->current < $pages->count
                     ? ($pages->current > 1 ? $pages->current - 1 : 1)
                     : $pages->current - 2;
                 $end = $pages->current < $pages->count
                     ? $pages->current + ($pages->current > 1 ? 1 : 2)
                     : $pages->count;
-            @endphp
+            )
             @for($i = $start; $i <= $end; $i++)
                 @php($navigate['page'] = $i)
                 <li class="page-item {{$pages->current == $i ? 'disabled' : ''}}">
