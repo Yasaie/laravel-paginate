@@ -1,0 +1,25 @@
+{
+    "name": "yasaie/laravel-pagination",
+    "description": "Laravel pagination items and blade navigate",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Payam Yasaie",
+            "email": "payam.yasaie@outlook.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Yasaie\\Pagination\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yasaie\\Pagination\\ServiceProvider"
+            ]
+        }
+    }
+}
