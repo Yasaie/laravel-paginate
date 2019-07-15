@@ -1,5 +1,5 @@
 {
-    "name": "yasaie/laravel-pagination",
+    "name": "yasaie/laravel-paginate",
     "description": "Laravel pagination items and blade navigate",
     "type": "library",
     "license": "MIT",
@@ -12,13 +12,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Yasaie\\Pagination\\": "src/"
+            "Yasaie\\Paginate\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Yasaie\\Pagination\\ServiceProvider"
+                "Yasaie\\Paginate\\ServiceProvider"
             ]
         }
     }

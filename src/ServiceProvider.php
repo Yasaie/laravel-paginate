@@ -1,6 +1,6 @@
 <?php
 
-namespace Yasaie\Pagination;
+namespace Yasaie\Paginate;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -25,6 +25,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__.'/../resources/views' => resource_path('views/vendor/pagination'),
         ], 'views');
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'pagination');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'Paginate');
     }
 }

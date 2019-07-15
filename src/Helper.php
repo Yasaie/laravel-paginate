@@ -5,7 +5,7 @@
  * @copyright   2019-07-15
  */
 
-namespace Yasaie\Pagination;
+namespace Yasaie\Paginate;
 
 
 class Helper
