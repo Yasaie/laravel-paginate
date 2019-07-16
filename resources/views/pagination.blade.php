@@ -4,7 +4,7 @@
         <ul class="pagination justify-content-center">
             @php($navigate['page'] = $pages->current - 1)
             <li class="page-item {{$pages->current == 1 ? 'disabled' : ''}}">
-                <a class="page-link" href="?{{http_build_query($navigate)}}"><i class="fa fa-chevron-right"></i></a>
+                <a class="page-link" href="?{{http_build_query($navigate)}}">«</a>
             </li>
             @if($pages->current > 2)
                 @php($navigate['page'] = 1)
@@ -42,7 +42,7 @@
             @endif
             @php($navigate['page'] = $pages->current + 1)
             <li class="page-item {{$pages->current == $pages->count ? 'disabled' : ''}}">
-                <a class="page-link" href="?{{http_build_query($navigate)}}"><i class="fa fa-chevron-left"></i></a>
+                <a class="page-link" href="?{{http_build_query($navigate)}}">»</a>
             </li>
         </ul>
     </nav>
