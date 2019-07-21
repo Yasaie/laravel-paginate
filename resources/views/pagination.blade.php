@@ -18,10 +18,10 @@
             @php(
                 $start = $pages->current < $pages->count
                     ? ($pages->current > 1 ? $pages->current - 1 : 1)
-                    : $pages->current - 2
+                    : $pages->current - ($pages->current > 2 ? 2 : 1)
             )
             @php(
-                $end = $pages->current < $pages->count
+                $end = ($pages->current < $pages->count and $pages->count > 2)
                     ? $pages->current + ($pages->current > 1 ? 1 : 2)
                     : $pages->count
             )
