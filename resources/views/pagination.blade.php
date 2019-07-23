@@ -18,11 +18,11 @@
             @php(
                 $start = $pages->current < $pages->count
                     ? ($pages->current > 1 ? $pages->current - 1 : 1)
-                    : $pages->current - ($pages->current > 2 ? 2 : 1)
+                    : $pages->current - ($pages->current > 3 ? 2 : 1)
             )
             @php(
-                $end = ($pages->current < $pages->count and $pages->count > 2)
-                    ? $pages->current + ($pages->current > 1 ? 1 : 2)
+                $end = $pages->current < $pages->count
+                    ? $pages->current + (($pages->current < 3 and $pages->count > 3) ? 2 : 1)
                     : $pages->count
             )
             @for($i = $start; $i <= $end; $i++)
